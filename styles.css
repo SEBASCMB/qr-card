@@ -1,0 +1,96 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--color-white: oklch(1 0 0);
+	--color-slate-300: oklch(0.91 0.0224 251.64);
+	--color-slate-500: oklch(0.56 0.0385 258.37);
+	--color-slate-900: oklch(0.32 0.0612 260.77);
+	--color-blue-600: oklch(0.61 0.2025 259.34);
+
+	--font-family-base: 'Outfit', sans-serif;
+	--font-size-paragraph: 15px;
+	--font-weight-regular: 400;
+	--font-weight-bold: 700;
+
+	--spacing-100: 16px;
+	--spacing-200: 1rem;
+	--spacing-300: 1.5rem;
+
+	--layout-mobile: 375px;
+	--layout-desktop: 1440px;
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	height: 100vh;
+	background: var(--color-slate-300);
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  width: 20rem;
+  height: 31.19rem;
+  gap: var(--spacing-300);
+	background: var(--color-white, #fff);
+  border-radius: 1.25rem;
+  box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+}
+
+.card__image {
+	width: 18rem;
+	height: 18rem;
+	border-radius: .625rem;
+	margin-top: var(--spacing-200);
+
+}
+
+.card__content {
+	width: 19rem;
+	height: 8.19rem;
+	display: flex;
+	padding: 0rem var(--spacing-200);
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-200);
+	align-self: stretch;
+}
+
+.card__title {
+
+
+	color: var(--color-slate-900);
+	text-align: center;
+	font-feature-settings: 'liga' off, 'clig' off;
+
+	font-family: var(--font-family-base);
+	font-size: 1.375rem;
+	font-weight: 700;
+	line-height: 120%;
+}
+
+.card__description {
+	text-align: center;
+	font-feature-settings: 'liga' off, 'clig' off;
+
+	font-family: var(--font-family-base);
+	font-size: .9375rem;
+	font-weight: 400;
+	line-height: 140%;
+	letter-spacing: .0125rem;
+}
+
+@media (max-width: 375px) {
+	.section {
+		width: var(--layout-mobile);
+	}
+}
